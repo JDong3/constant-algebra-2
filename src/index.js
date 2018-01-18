@@ -8,5 +8,7 @@ class Index extends React.Component() {
     )
   }
 }
-
+console.log('yellow')
 reactDom.render(<Index/>, document.getElementById('root'))
+
+export default Index
