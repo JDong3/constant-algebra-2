@@ -1,14 +1,12 @@
-import reactDom from 'react-dom'
-import react from 'react'
+import ReactDom from 'react-dom'
+import React from 'react'
 
-class Index extends React.Component() {
-  render() {
+class Index extends React.Component {
+  render()
     return (
-      <div>hello</div>
+      <div>hello wwww</div>
     )
   }
 }
 console.log('yellow')
-reactDom.render(<Index/>, document.getElementById('root'))
-
-export default Index
+ReactDom.render(<div>hai</div>, document.getElementById('root'))

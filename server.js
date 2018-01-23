@@ -1,9 +1,10 @@
 var express = require('express')
+var path = require('path')
 var app = express()
 
-app.use(express.static('../dist'))
+app.use(express.static('dist'))
 app.get('/', (req, res) => (
-  res.send('/index.html')
+  res.send('hello world')
 ))
 
 app.listen(3000)
