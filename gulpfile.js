@@ -8,18 +8,29 @@ gulp.task('clean', (done) => (
     .then((res) => (done()))
 ))
 
-gulp.task('packageSrc', () => (
+gulp.task('packageSrc', (done) => (
   gulp.src('src/**/*.js')
   .pipe(webpack(require('./webpack.config.js')))
-  .pipe(gulp.dest('dist'))
+    .on('error', () => {
+      console.error('an error occured')
+      done()
+    })
+    .pipe(gulp.dest('dist'))
 ))
 
 gulp.task('packageHtml', () => (
   gulp.src('html/**/*.html')
-  .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist'))
 ))
 
 const buildSeries = (
-  gulp.series('clean', 'packageSrc', 'packageHtml', nothing)
+  gulp.series('clean', 'packageHtml', 'packageSrc', nothing)
 )
 gulp.task('build', buildSeries)
+
+const startSeries = (
+  gulp.series('build')
+)
+gulp.task('start', () => (
+  gulp.watch('src', gulp.series(startSeries))
+))
