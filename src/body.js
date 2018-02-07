@@ -1,9 +1,10 @@
 import React from 'react'
+import {Row} from 'react-flexbox-grid'
 
 class Body extends React.Component {
   render() {
     return(
-      <div>this is the bod</div>adsfa
+      <Row>this is a row</Row>
     )
   }
 }
