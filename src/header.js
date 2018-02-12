@@ -2,14 +2,22 @@ import React from 'react'
 import {Row, Col, Grid} from 'react-flexbox-grid'
 import S from './styles'
 
-class Header extends React.Component {a
+class Header extends React.Component {
   render() {
     return(
-      <Row style={{...S.blue}}>
-        <Col xs={12} sm={12} md={!2} lg={12}>
-          this is the header in a col
-        </Col>
-      </Row>
+      <div style={S.header} id='headerContainer'>
+        <Row id='headerContent'>
+          <Col xs={12} sm={12} md={12} lg={12}  style={S.leftBuffer}>
+            Header
+            <span>button1</span>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <div style={S.lightDiv}/>
+          </Col>
+        </Row>
+      </div>
     )
   }
 }

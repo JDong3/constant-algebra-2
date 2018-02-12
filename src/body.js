@@ -1,10 +1,17 @@
 import React from 'react'
-import {Row} from 'react-flexbox-grid'
+import {Row, Col} from 'react-flexbox-grid'
+import S from './styles'
 
 class Body extends React.Component {
   render() {
     return(
-      <Row>this is a row</Row>
+      <div>
+        <Row>
+          <Col xs={12} sm={12} md={12} lg={12}  style={S.headerStyleText}>
+            Body
+          </Col>
+        </Row>
+      </div>
     )
   }
 }
