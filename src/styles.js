@@ -1,15 +1,16 @@
+const normalTextColor = '808080'
+
 const Styles = {
   header: {
     fontFamily: 'monospace',
     fontSize: 25,
-    backgroundColor: '#ffffff',
-    color: '#606060',
+    color: normalTextColor,
     paddingTop: '0.1em',
     paddingBottom: '0.1em'
   },
   lightDiv: {
     height: '0.05em',
-    backgroundColor: '#606060',
+    backgroundColor: normalTextColor,
     marginTop: '0.2em',
     marginBottom: '0.2em',
     marginLeft: '0.3em',
@@ -18,7 +19,7 @@ const Styles = {
   headerStyleText: {
     fontFamily: 'monospace',
     fontSize: 25,
-    color: '#606060',
+    color: normalTextColor,
     paddingTop: '0.1em',
     paddingBottom: '0.1em',
     marginLeft: '1vw'

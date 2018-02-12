@@ -1,7 +1,5 @@
 import ReactDom from 'react-dom'
 import React from 'react'
-import Body from './body'
-import Header from './header'
+import App from './app'
 
-ReactDom.render(<Header/>, document.getElementById('header'))
-ReactDom.render(<Body/>, document.getElementById('body'))
+ReactDom.render(<App/>, document.getElementById('root'))
